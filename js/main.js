@@ -63,6 +63,78 @@
   }
 })();
 
+// ── Hero carousel ─────────────────────────────────────────────────────────────
+(() => {
+  const slides   = Array.from(document.querySelectorAll('.hero-slide'));
+  const dots     = Array.from(document.querySelectorAll('.hero-dot'));
+  const DURATION = 7000;
+  let current    = 0;
+  let timer      = null;
+  const isMobile = () => window.innerWidth <= 768;
+
+  // Filter out 4K slide on mobile
+  const visibleSlides = () => slides.filter(s =>
+    !(s.classList.contains('hero-slide--4k') && isMobile())
+  );
+  const visibleDots = () => dots.filter(d =>
+    !(d.dataset.slide === '2' && isMobile())
+  );
+
+  function goTo(index) {
+    const vs = visibleSlides();
+    const vd = visibleDots();
+    const prev = vs[current];
+    current = ((index % vs.length) + vs.length) % vs.length;
+    const next = vs[current];
+
+    // Pause previous video
+    const prevVid = prev.querySelector('.hero-video');
+    if (prevVid) prevVid.pause();
+
+    prev.classList.remove('active');
+    next.classList.add('active');
+
+    // Play next video, load it first if needed
+    const nextVid = next.querySelector('.hero-video');
+    if (nextVid) {
+      if (nextVid.readyState === 0) nextVid.load();
+      nextVid.play().catch(() => {});
+    }
+
+    // Sync dots
+    vd.forEach(d => d.classList.remove('active'));
+    if (vd[current]) vd[current].classList.add('active');
+  }
+
+  function next() { goTo(current + 1); }
+
+  function startTimer() {
+    clearInterval(timer);
+    timer = setInterval(next, DURATION);
+  }
+
+  // Dot click
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const idx = parseInt(dot.dataset.slide);
+      const vs  = visibleSlides();
+      const target = vs.findIndex(s => parseInt(s.dataset.index) === idx);
+      if (target !== -1) { goTo(target); startTimer(); }
+    });
+  });
+
+  // Pause on hover
+  const hero = document.getElementById('hero');
+  hero.addEventListener('mouseenter', () => clearInterval(timer));
+  hero.addEventListener('mouseleave', startTimer);
+
+  // Start first slide video if it's a video
+  const firstVid = slides[0].querySelector('.hero-video');
+  if (firstVid) { firstVid.load(); firstVid.play().catch(() => {}); }
+
+  startTimer();
+})();
+
 // ── Nav scroll ────────────────────────────────────────────────────────────────
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
