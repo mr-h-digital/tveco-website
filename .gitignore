@@ -1,0 +1,120 @@
+# ═══════════════════════════════════════════════════════
+# OPERATING SYSTEM
+# ═══════════════════════════════════════════════════════
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encdata
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ═══════════════════════════════════════════════════════
+# EDITORS & IDEs
+# ═══════════════════════════════════════════════════════
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# JetBrains (WebStorm, PhpStorm, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+Session.vim
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ═══════════════════════════════════════════════════════
+# NODE / NPM (if build tools are added later)
+# ═══════════════════════════════════════════════════════
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm
+.pnp
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Build output
+dist/
+build/
+out/
+
+# ═══════════════════════════════════════════════════════
+# ENVIRONMENT & SECRETS
+# ═══════════════════════════════════════════════════════
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+secrets.json
+
+# ═══════════════════════════════════════════════════════
+# LOGS & TEMP FILES
+# ═══════════════════════════════════════════════════════
+*.log
+logs/
+tmp/
+temp/
+.cache/
+
+# ═══════════════════════════════════════════════════════
+# DEPLOYMENT
+# ═══════════════════════════════════════════════════════
+.vercel
+.netlify
+.ftpquota
+
+# ═══════════════════════════════════════════════════════
+# CLAUDE
+# ═══════════════════════════════════════════════════════
+.claude/
+.claude-flow/
+.claudeignore
+CLAUDE.md
+
+# ═══════════════════════════════════════════════════════
+# MISC
+# ═══════════════════════════════════════════════════════
+*.zip
+*.tar.gz
+*.rar

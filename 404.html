@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>404 — Page Not Found | TVECO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  .error-page {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 24px;
+  }
+  .error-code {
+    font-family: var(--ff-display);
+    font-size: clamp(120px, 20vw, 220px);
+    line-height: 1;
+    color: var(--orange);
+    opacity: 0.15;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .error-content {
+    position: relative;
+    z-index: 1;
+  }
+  .error-content h1 {
+    font-family: var(--ff-display);
+    font-size: clamp(36px, 6vw, 64px);
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  .error-content p {
+    font-size: 17px;
+    color: var(--muted);
+    margin-bottom: 40px;
+    max-width: 420px;
+    line-height: 1.7;
+  }
+  .error-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>
+</head>
+<body>
+<div class="error-page">
+  <span class="error-code">404</span>
+  <div class="error-content">
+    <div class="tag" style="margin-bottom:24px;">Page Not Found</div>
+    <h1>Lost on the Road?</h1>
+    <p>The page you're looking for doesn't exist or may have been moved. Let's get you back on track.</p>
+    <div class="error-actions">
+      <a href="/" class="btn-primary">Back to Home →</a>
+      <a href="/#contact" class="btn-outline">Contact Us</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

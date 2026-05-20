@@ -1,0 +1,46 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0A0C0F"/>
+
+  <!-- Subtle orange radial glow -->
+  <radialGradient id="glow" cx="50%" cy="48%" r="45%">
+    <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.12"/>
+    <stop offset="100%" stop-color="#FF6B00" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="5" height="630" fill="#FF6B00"/>
+
+  <!-- Motion arc -->
+  <path d="M80 340 C280 140 760 100 1080 280"
+        stroke="#FF6B00" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.9"/>
+  <!-- Arrowhead -->
+  <path d="M1080 280 L1046 268 L1058 296Z" fill="#FF6B00"/>
+
+  <!-- TVEC wordmark -->
+  <text x="80" y="460"
+        font-family="Space Grotesk, sans-serif"
+        font-size="130"
+        font-weight="700"
+        letter-spacing="24"
+        fill="#F0F4F8">TVEC</text>
+
+  <!-- Tagline -->
+  <text x="82" y="520"
+        font-family="Space Grotesk, sans-serif"
+        font-size="22"
+        font-weight="400"
+        letter-spacing="6"
+        fill="#6B7A8F">TIMELINE VEHICLE EXPORT COMPANY</text>
+
+  <!-- Domain pill -->
+  <rect x="82" y="550" width="190" height="34" rx="17" fill="none" stroke="#FF6B00" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="177" y="572"
+        font-family="Space Grotesk, sans-serif"
+        font-size="14"
+        font-weight="600"
+        letter-spacing="1"
+        text-anchor="middle"
+        fill="#FF6B00">tveco.co.za</text>
+</svg>
