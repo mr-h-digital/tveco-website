@@ -528,7 +528,7 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 .hero-logo {
-  height: calc(clamp(58px, 9vw, 110px) * 0.92 * 5.6);
+  height: clamp(240px, calc(clamp(58px, 9vw, 110px) * 0.92 * 5.6), 570px);
   width: auto;
   display: block;
   flex-shrink: 0;
@@ -599,8 +599,8 @@ ul { list-style: none; }
 .scroll-indicator {
   position: absolute;
   bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: max(40px, 4%);
+  transform: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1671,11 +1671,33 @@ footer {
 /* ── Tablet landscape (≤1024px) ── */
 @media (max-width: 1024px) {
   .about-pillars         { grid-template-columns: 1fr 1fr; }
+  .about-grid, .why-grid { gap: 48px; }
+
+  /* About badge — pull in from edge so it doesn't overflow */
+  .about-badge-card      { right: 0; bottom: 0; }
+
+  /* Why float image — move so it doesn't overflow container right edge */
+  .why-image-float       { right: 0; bottom: -20px; }
+
   .services-grid                          { grid-template-columns: 1fr 1fr; }
   .services-grid .service-card            { grid-column: span 1 !important; }
   .footer-grid           { grid-template-columns: 1fr 1fr; }
   .process-steps         { grid-template-columns: repeat(3, 1fr); }
   .process-steps::before { display: none; }
+
+  /* Testimonials — drop to 2 columns at tablet to reduce crowding */
+  .testimonials-grid     { grid-template-columns: 1fr 1fr; }
+
+  /* Nav — tighten link gap to reduce overflow risk */
+  .nav-links { gap: 20px; }
+}
+
+/* ── Nav collapses to hamburger at 900px ── */
+@media (max-width: 900px) {
+  .nav-links  { display: none; }
+  .nav-cta .btn-outline { display: none; }
+  .nav-cta .btn-primary { font-size: 13px; padding: 10px 18px; }
+  #hamburger  { display: flex; }
 }
 
 /* ── Tablet portrait / large phones (≤768px) ── */
@@ -1684,12 +1706,6 @@ footer {
     --nav-h: 64px;
     --section-pad: clamp(60px, 8vw, 100px);
   }
-
-  /* Nav — shrink CTA button to fit alongside hamburger */
-  .nav-links            { display: none; }
-  .nav-cta .btn-outline { display: none; }
-  .nav-cta .btn-primary { font-size: 13px; padding: 10px 18px; }
-  #hamburger            { display: flex; }
 
   /* Hero — stronger overlay for portrait readability */
   .hero-overlay {
@@ -1701,7 +1717,7 @@ footer {
     );
   }
   .hero-title-row    { flex-direction: column; align-items: center; gap: 20px; }
-  .hero-logo         { height: clamp(182px, 49vw, 280px); }
+  .hero-logo         { height: clamp(160px, 42vw, 260px); }
   .hero-eyebrow span { font-size: 11px; letter-spacing: 2px; }
   .hero-stats        { display: none; }
   .hero-content      { text-align: center; }
@@ -1834,8 +1850,11 @@ footer {
   #about::before     { font-size: 120px; }
 
   /* About badge — compact on tiny screens */
-  .about-badge-card      { padding: 14px 18px; }
+  .about-badge-card      { padding: 14px 18px; right: 8px; bottom: 8px; }
   .about-badge-card .big { font-size: 32px; }
+
+  /* About pillars — single column on small phones */
+  .about-pillars { grid-template-columns: 1fr; }
 
   /* Stats */
   .stats-grid { grid-template-columns: 1fr 1fr; }
