@@ -1861,8 +1861,9 @@ footer {
   .about-badge-card      { padding: 14px 18px; right: 8px; bottom: 8px; }
   .about-badge-card .big { font-size: 32px; }
 
-  /* About pillars — single column on small phones */
-  .about-pillars { grid-template-columns: 1fr; }
+  /* About pillars — keep 2-column so align-items: stretch equalises row heights */
+  .about-pillars { grid-template-columns: 1fr 1fr; }
+  .pillar        { text-align: center; min-height: 140px; justify-content: center; }
 
   /* Stats */
   .stats-grid { grid-template-columns: 1fr 1fr; }
