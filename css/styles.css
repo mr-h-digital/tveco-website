@@ -711,9 +711,7 @@ ul { list-style: none; }
   border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 3/4;
-  background:
-    linear-gradient(180deg, rgba(10,12,15,0.1) 0%, rgba(10,12,15,0.5) 100%),
-    url('../assets/images/office-background.jpg') center top/cover no-repeat;
+  background: transparent;
 }
 .about-img-inner img {
   width: 100%;
