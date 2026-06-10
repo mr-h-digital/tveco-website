@@ -126,7 +126,7 @@ body:not(.loaded) .hero-actions,
 body:not(.loaded) .hero-stats,
 body:not(.loaded) .scroll-indicator {
   animation: none !important;
-  opacity: 0 !important;
+  opacity: 0.001 !important;
   transform: translateY(18px) !important;
 }
 body.loaded .hero-eyebrow    { animation: fadeUp 0.55s 0.05s cubic-bezier(0.2,0.9,0.2,1) forwards; }
@@ -807,7 +807,7 @@ ul { list-style: none; }
   margin-bottom: 10px;
   display: block;
 }
-.pillar h4 {
+.pillar h3 {
   font-family: var(--ff-head);
   font-size: 14px;
   font-weight: 700;

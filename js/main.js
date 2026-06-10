@@ -14,16 +14,15 @@
     setTimeout(() => { preloader.style.display = 'none'; }, 500);
   };
 
-  // minimum 650 ms so the animation is seen, not just a flash
   const start = performance.now();
-  const MIN   = 650;
+  const MIN   = 0;
 
   window.addEventListener('load', () => {
     const wait = Math.max(0, MIN - (performance.now() - start));
     setTimeout(finishLoading, wait);
   });
   // hard fallback
-  setTimeout(() => finishLoading(), 2400);
+  setTimeout(() => finishLoading(), 800);
 
   // ── Anchor transition overlay ──────────────────────────────────────────────
   const showOverlay = () => transition && transition.classList.add('show');
