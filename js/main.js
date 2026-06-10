@@ -1,27 +1,20 @@
-// ── Preloader + hero sync + anchor transitions ────────────────────────────────
+// ── Hero animations + anchor transitions ──────────────────────────────────────
 (() => {
-  const preloader  = document.getElementById('preloader');
   const transition = document.getElementById('pageTransition');
   const nav        = document.getElementById('nav');
 
   const navH = () => (nav ? nav.offsetHeight : 72);
 
-  const finishLoading = () => {
+  const triggerHero = () => {
     if (document.body.classList.contains('loaded')) return;
     document.body.classList.add('loaded');
-    if (!preloader) return;
-    preloader.classList.add('hide');
-    setTimeout(() => { preloader.style.display = 'none'; }, 500);
   };
 
-  // Dismiss preloader on DOMContentLoaded so it doesn't block LCP
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', finishLoading);
+    document.addEventListener('DOMContentLoaded', triggerHero);
   } else {
-    finishLoading();
+    triggerHero();
   }
-  // hard fallback
-  setTimeout(() => finishLoading(), 800);
 
   // ── Anchor transition overlay ──────────────────────────────────────────────
   const showOverlay = () => transition && transition.classList.add('show');
