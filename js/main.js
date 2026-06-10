@@ -14,13 +14,12 @@
     setTimeout(() => { preloader.style.display = 'none'; }, 500);
   };
 
-  const start = performance.now();
-  const MIN   = 0;
-
-  window.addEventListener('load', () => {
-    const wait = Math.max(0, MIN - (performance.now() - start));
-    setTimeout(finishLoading, wait);
-  });
+  // Dismiss preloader on DOMContentLoaded so it doesn't block LCP
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', finishLoading);
+  } else {
+    finishLoading();
+  }
   // hard fallback
   setTimeout(() => finishLoading(), 800);
 
