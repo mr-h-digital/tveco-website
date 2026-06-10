@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="TVECO — Timeline Vehicle Export Company (Pty) Ltd. Expert vehicle export solutions from South Africa to the world. Reliable, efficient, professional.">
+<meta name="description" content="TVECO — Timeline Vehicle Export Company (Pty) Ltd. Expert vehicle export solutions from South Africa to the world. Licensed, reliable, and fully compliant.">
 <meta name="keywords" content="vehicle export South Africa, car export SA, vehicle export company, TVECO, Timeline Vehicle Export, export cars Africa, South Africa vehicle export">
 <meta name="author" content="Timeline Vehicle Export Company (Pty) Ltd">
+<meta property="og:site_name" content="TVECO — Vehicle Export Experts">
 <meta property="og:title" content="TVECO — Timeline Vehicle Export Company">
 <meta property="og:description" content="Expert vehicle export solutions from South Africa to the world. Reliable, efficient, professional.">
 <meta property="og:type" content="website">
@@ -13,6 +14,7 @@
 <meta property="og:image" content="https://tveco.co.za/assets/og/og-image-1200x630.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TVECO — South Africa's trusted vehicle export specialists">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TVECO — Timeline Vehicle Export Company">
 <meta name="twitter:description" content="Expert vehicle export solutions from South Africa to the world. Reliable, efficient, professional.">
@@ -49,7 +51,7 @@
     "width": 512,
     "height": 512
   },
-  "image": "https://tveco.co.za/assets/logo/tvec-logo.png",
+  "image": "https://tveco.co.za/assets/og/og-image-1200x630.png",
   "telephone": "+27-72-266-3988",
   "email": "enquiries@tveco.co.za",
   "address": {
@@ -58,6 +60,29 @@
     "addressLocality": "Zwartkop, Centurion",
     "postalCode": "0157",
     "addressCountry": "ZA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -25.8623,
+    "longitude": 28.1447
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Thabo Seabi"
   },
   "areaServed": "Worldwide",
   "serviceType": ["Vehicle Export", "Vehicle Sourcing", "Export Documentation", "Shipping and Logistics"],
@@ -114,13 +139,23 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "TVECO — Vehicle Export Experts",
+  "url": "https://tveco.co.za"
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap&font-display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/images/hero-slide-1.jpg" fetchpriority="high">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+<a href="#about" class="skip-link">Skip to main content</a>
 
 <!-- ═══════════════ PRELOADER ═══════════════ -->
 <div id="preloader" aria-hidden="true">
@@ -228,7 +263,7 @@
       </h1>
       <img src="assets/logo/tvec-logo.png"
            class="hero-logo"
-           alt="TVECO — Timeline Vehicle Export Company"
+           alt=""
            aria-hidden="true">
     </div>
     <p class="hero-desc">
@@ -845,9 +880,7 @@
         </a>
         <p>Timeline Vehicle Export Company (Pty) Ltd — South Africa's trusted vehicle export specialists. Moving vehicles globally with precision, compliance, and care.</p>
         <div class="footer-social">
-          <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
-          <a href="#" class="social-btn" aria-label="Facebook">f</a>
-          <a href="#" class="social-btn" aria-label="WhatsApp">W</a>
+          <a href="https://wa.me/27722663988" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">W</a>
         </div>
       </div>
       <div class="footer-col">
