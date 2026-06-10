@@ -5,16 +5,6 @@
 
   const navH = () => (nav ? nav.offsetHeight : 72);
 
-  const triggerHero = () => {
-    if (document.body.classList.contains('loaded')) return;
-    document.body.classList.add('loaded');
-  };
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', triggerHero);
-  } else {
-    triggerHero();
-  }
 
   // ── Anchor transition overlay ──────────────────────────────────────────────
   const showOverlay = () => transition && transition.classList.add('show');
