@@ -328,14 +328,21 @@
       <div class="about-img-wrap reveal-left">
         <div class="about-img-frame"></div>
         <div class="about-img-inner">
-          <img
-            src="assets/images/thabo-seabi.png"
-            sizes="(max-width: 768px) 90vw, 45vw"
-            alt="Thabo Seabi — Founder &amp; Director, TVECO"
-            width="716" height="1600"
-            loading="lazy"
-            decoding="async"
-          >
+          <picture>
+            <source
+              type="image/webp"
+              srcset="assets/images/thabo-seabi-400.webp 400w,
+                      assets/images/thabo-seabi-600.webp 600w,
+                      assets/images/thabo-seabi.webp 716w"
+              sizes="(max-width: 768px) 90vw, 45vw">
+            <img
+              src="assets/images/thabo-seabi.png"
+              alt="Thabo Seabi — Founder &amp; Director, TVECO"
+              width="716" height="1600"
+              loading="lazy"
+              decoding="async"
+            >
+          </picture>
         </div>
         <div class="about-badge-card">
           <span class="big">20+</span>
