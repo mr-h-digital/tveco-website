@@ -1543,7 +1543,7 @@ ul { list-style: none; }
   right: 24px;
   z-index: 3;
   background: var(--orange);
-  color: var(--pure);
+  color: #FFFFFF !important;
   font-family: var(--ff-head);
   font-weight: 700;
   font-size: 13px;
@@ -1603,7 +1603,7 @@ footer {
   cursor: pointer;
 }
 .social-btn:hover { border-color: var(--orange); background: rgba(255,107,0,0.1); }
-.footer-col h4 {
+.footer-col h3 {
   font-family: var(--ff-head);
   font-size: 13px;
   font-weight: 700;
