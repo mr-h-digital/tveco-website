@@ -306,7 +306,7 @@ ul { list-style: none; }
   position: fixed;
   top: 0; left: 0; right: 0;
   height: var(--nav-h);
-  z-index: 1000;
+  z-index: 10000;
   transition: background 0.3s, backdrop-filter 0.3s, box-shadow 0.3s;
 }
 #nav.scrolled {
@@ -1542,8 +1542,8 @@ ul { list-style: none; }
   bottom: 24px;
   right: 24px;
   z-index: 3;
-  background: var(--orange);
-  color: #FFFFFF !important;
+  background: var(--pure);
+  color: var(--night) !important;
   font-family: var(--ff-head);
   font-weight: 700;
   font-size: 13px;
@@ -1554,7 +1554,8 @@ ul { list-style: none; }
   box-shadow: 0 4px 20px rgba(255,107,0,0.35);
 }
 .location-map-btn:hover {
-  background: var(--orange-lt);
+  background: var(--orange);
+  color: var(--pure) !important;
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(255,107,0,0.45);
 }
