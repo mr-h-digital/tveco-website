@@ -9,7 +9,7 @@
   --dark:      #111318;
   --card:      #181C23;
   --border:    #252B35;
-  --muted:     #6B7A8F;
+  --muted:     #8A99AE;
   --text:      #C8D4E0;
   --white:     #F0F4F8;
   --pure:      #FFFFFF;
@@ -459,6 +459,8 @@ ul { list-style: none; }
 .hero-dot {
   width: 8px;
   height: 8px;
+  min-width: 24px;
+  min-height: 24px;
   border-radius: 50%;
   border: 2px solid rgba(255,255,255,0.4);
   background: transparent;
@@ -497,12 +499,13 @@ ul { list-style: none; }
   left: 0; top: 0; bottom: 0;
   width: 4px;
   background: var(--orange);
-  opacity: 0;
+  transform-origin: top;
+  transform: scaleY(0);
   animation: lineReveal 1s 0.5s ease forwards;
 }
 @keyframes lineReveal {
-  from { height: 0; opacity: 1; }
-  to   { height: 100%; opacity: 1; }
+  from { transform: scaleY(0); opacity: 1; }
+  to   { transform: scaleY(1); opacity: 1; }
 }
 .hero-content {
   position: relative;
@@ -996,7 +999,7 @@ ul { list-style: none; }
   background: rgba(255,107,0,0.1);
 }
 .step-emoji { font-size: 28px; }
-.process-step h4 {
+.process-step h3 {
   font-family: var(--ff-head);
   font-size: 14px;
   font-weight: 700;
@@ -1074,7 +1077,7 @@ ul { list-style: none; }
   font-size: 20px;
   flex-shrink: 0;
 }
-.why-point-text h4 {
+.why-point-text h3 {
   font-family: var(--ff-head);
   font-size: 15px;
   font-weight: 700;
