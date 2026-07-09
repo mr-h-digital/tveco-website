@@ -113,13 +113,13 @@ Run:
 This script will:
 
 - Build the portal with `VITE_BASE_PATH=/client-zone`
-- Use production API defaults (`https://tveco.co.za/api`)
+- Use production API defaults (`https://tveco-invoice-generator-bff-production.up.railway.app/api`)
 - Copy the generated files into `client-zone/`
 
 Optional overrides:
 
 ```bash
-TVECO_API_URL=https://tveco.co.za/api \
+TVECO_API_URL=https://tveco-invoice-generator-bff-production.up.railway.app/api \
 TVECO_PUBLIC_APP_URL=https://tveco.co.za/client-zone \
 ./scripts/publish-client-zone.sh
 ```

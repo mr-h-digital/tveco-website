@@ -6,7 +6,7 @@ UI_DIR="$ROOT_DIR/tveco-invoice-generator-web-ui"
 WEBSITE_DIR="$ROOT_DIR/tvec-website"
 TARGET_DIR="$WEBSITE_DIR/client-zone"
 
-: "${TVECO_API_URL:=https://tveco.co.za/api}"
+: "${TVECO_API_URL:=https://tveco-invoice-generator-bff-production.up.railway.app/api}"
 : "${TVECO_PUBLIC_APP_URL:=https://tveco.co.za/client-zone}"
 
 echo "Building client zone from $UI_DIR"
