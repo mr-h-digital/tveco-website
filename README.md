@@ -100,6 +100,30 @@ Or serve locally with any static file server:
 npx serve .
 ```
 
+## Client Zone Deployment
+
+The client portal app is built from the sibling workspace folder `tveco-invoice-generator-web-ui` and published into this website under `client-zone/`.
+
+Run:
+
+```bash
+./scripts/publish-client-zone.sh
+```
+
+This script will:
+
+- Build the portal with `VITE_BASE_PATH=/client-zone`
+- Use production API defaults (`https://api.tveco.co.za/api`)
+- Copy the generated files into `client-zone/`
+
+Optional overrides:
+
+```bash
+TVECO_API_URL=https://api.tveco.co.za/api \
+TVECO_PUBLIC_APP_URL=https://tveco.co.za/client-zone \
+./scripts/publish-client-zone.sh
+```
+
 ## Favicon Setup
 
 Favicon files are referenced in `index.html` but need to be generated and placed in `assets/icons/`.
