@@ -154,7 +154,7 @@ Update the following after deployment:
 ## Notes
 
 - Some images are loaded from Unsplash CDN. For production, replace with locally hosted files in `assets/images/`.
-- WhatsApp number is set to `+27 72 266 3988` (Thabo Seabi).
+- WhatsApp number is set to `+27 75 966 3986` (Thabo Seabi).
 - Contact emails: `enquiries@tveco.co.za` and `thabo@tveco.co.za`.
 
 ## Credits

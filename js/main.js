@@ -284,7 +284,7 @@ function handleEnquiry(e) {
     'Sent via tveco.co.za'
   ].join('\n');
 
-  const url = `https://wa.me/27722663988?text=${encodeURIComponent(msg)}`;
+  const url = `https://wa.me/27759663986?text=${encodeURIComponent(msg)}`;
   btn.textContent = 'Opening WhatsApp...';
   btn.disabled = true;
   window.open(url, '_blank', 'noopener,noreferrer') || (window.location.href = url);
