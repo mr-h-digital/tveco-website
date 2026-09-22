@@ -673,6 +673,13 @@ ul { list-style: none; }
   transform-origin: 25% 55%;
   filter: drop-shadow(16px 20px 32px rgba(0,0,0,0.8));
 }
+/* Wider-aspect portrait (e.g. Thabo Seabi photo) needs a different crop focus than the shared default */
+.about-img-inner img.about-photo--wide {
+  object-position: 50% 30%;
+}
+.about-img-inner:hover img.about-photo--wide {
+  transform-origin: 50% 30%;
+}
 .about-img-frame {
   position: absolute;
   top: -16px;
