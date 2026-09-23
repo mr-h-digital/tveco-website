@@ -41,6 +41,7 @@
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://tveco.co.za/#organization",
   "name": "Timeline Vehicle Export Company (Pty) Ltd",
   "alternateName": "TVECO",
   "description": "Timeline Vehicle Export Company (Pty) Ltd is a registered vehicle export company based in Gauteng, South Africa. Founded by Mr. Thabo Seabi with over two decades of experience in the motor vehicle industry.",
@@ -85,8 +86,7 @@
     "name": "Thabo Seabi"
   },
   "areaServed": "Worldwide",
-  "serviceType": ["Vehicle Export", "Vehicle Sourcing", "Export Documentation", "Shipping and Logistics"],
-  "sameAs": []
+  "serviceType": ["Vehicle Export", "Vehicle Sourcing", "Export Documentation", "Shipping and Logistics"]
 }
 </script>
 
@@ -143,8 +143,37 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://tveco.co.za/#website",
   "name": "TVECO — Vehicle Export Experts",
-  "url": "https://tveco.co.za"
+  "url": "https://tveco.co.za",
+  "publisher": {
+    "@id": "https://tveco.co.za/#organization"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://tveco.co.za/#webpage",
+  "url": "https://tveco.co.za/",
+  "name": "TVECO — Vehicle Export Experts | South Africa",
+  "description": "Expert vehicle export solutions from South Africa to the world. Licensed, reliable, and fully compliant.",
+  "inLanguage": "en-ZA",
+  "dateModified": "2026-09-23",
+  "isPartOf": {
+    "@id": "https://tveco.co.za/#website"
+  },
+  "about": {
+    "@id": "https://tveco.co.za/#organization"
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://tveco.co.za/assets/og/og-image-1200x630.png",
+    "width": 1200,
+    "height": 630
+  }
 }
 </script>
 <link rel="preload" href="assets/fonts/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2" as="font" type="font/woff2" crossorigin>
