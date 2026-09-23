@@ -100,29 +100,9 @@ Or serve locally with any static file server:
 npx serve .
 ```
 
-## Client Zone Deployment
+## Client Zone
 
-The client portal app is built from the sibling workspace folder `tveco-invoice-generator-web-ui` and published into this website under `client-zone/`.
-
-Run:
-
-```bash
-./scripts/publish-client-zone.sh
-```
-
-This script will:
-
-- Build the portal with `VITE_BASE_PATH=/client-zone`
-- Use production API defaults (`https://tveco-invoice-generator-bff-production.up.railway.app/api`)
-- Copy the generated files into `client-zone/`
-
-Optional overrides:
-
-```bash
-TVECO_API_URL=https://tveco-invoice-generator-bff-production.up.railway.app/api \
-TVECO_PUBLIC_APP_URL=https://tveco.co.za/client-zone \
-./scripts/publish-client-zone.sh
-```
+The client/admin portal app (`tveco-invoice-generator-web-ui`) is deployed independently via GitHub Pages at [hub.tveco.co.za](https://hub.tveco.co.za). It is no longer built and copied into this website — the "Client Zone" links on this site simply point to that domain directly, so the portal only ever has one deployed copy.
 
 ## Favicon Setup
 
